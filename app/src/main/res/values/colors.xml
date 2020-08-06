@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ef4438</color>
+    <color name="colorPrimaryDark">#d32e2e</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="fab_yellow_button_color_normal">#ffab00</color>
+    <color name="fab_yellow_button_color_pressed">#ffba2e</color>
+    <color name="facebook_blue_background_button_color_normal">#01579b</color>
+    <color name="facebook_blue_background_button_color_pressed">#186cad</color>
+    <color name="get_recipe_red_background_button_color_normal">#f44336</color>
+    <color name="get_recipe_red_background_button_color_pressed">#ff6054</color>
+</resources>

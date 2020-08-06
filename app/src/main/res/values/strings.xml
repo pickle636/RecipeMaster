@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecipeMaster</string>
+    <string name="recipe_title">Pizza Recipe!</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="please_click_back_again_to_exit">Please click back again to exit %1$s</string>
+    <string name="hyphen">- %1$s</string>
+    <string name="ss">%1$s:</string>
+</resources>
