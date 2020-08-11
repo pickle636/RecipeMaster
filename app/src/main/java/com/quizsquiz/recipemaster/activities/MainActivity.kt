@@ -18,12 +18,14 @@ class MainActivity : BaseActivity() {
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mSharedPreferences = getSharedPreferences(Constants.PREFERENCE_NAME, Context.MODE_PRIVATE)
         setSupportActionBar(toolbar_main_activity)
+        showProgressDialog(resources.getString(R.string.please_wait))
         fab_get_recipe.setOnClickListener {
             val intent = Intent(this, RecipeActivity::class.java)
             startActivity(intent)
         }
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        hideProgressDialog()
 
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel

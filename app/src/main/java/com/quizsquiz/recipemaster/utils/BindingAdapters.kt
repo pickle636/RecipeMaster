@@ -1,6 +1,7 @@
 package com.quizsquiz.recipemaster.utils
 
 import android.graphics.LightingColorFilter
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -8,7 +9,7 @@ import com.quizsquiz.recipemaster.R
 import de.hdodenhof.circleimageview.CircleImageView
 
 
-@BindingAdapter("app:src")
+@BindingAdapter("app:setMainImgSrc")
 fun setMainImage(view: CircleImageView, url: String?) {
     Glide.with(view.context)
         .load(url)
@@ -45,4 +46,22 @@ fun setPreparingList(view: TextView, list: List<String>?) {
         }
     }
     view.text = string.toString()
+}
+@BindingAdapter("app:setRecipeImg1Src")
+fun setRecipeImage1(view: ImageView, url: String?) {
+    Glide.with(view.context)
+        .load(url)
+        .centerCrop()
+        .placeholder(R.drawable.ic_arrow_back_24)
+        .into(view)
+}
+
+
+@BindingAdapter("app:setRecipeImg2Src")
+fun setRecipeImage2(view: ImageView, url: String?) {
+    Glide.with(view.context)
+        .load(url)
+        .centerCrop()
+        .placeholder(R.drawable.ic_arrow_back_24)
+        .into(view)
 }
