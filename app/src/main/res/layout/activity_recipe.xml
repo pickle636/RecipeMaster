@@ -13,8 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.RecipeActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".activities.RecipeActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -27,96 +27,108 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:title="@{String.format(@string/recipe, viewmodel.recipe.title)}"/>
+                app:title="@{String.format(@string/recipe_title, viewmodel.recipe.title)}" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
+
             <LinearLayout
+                android:id="@+id/main_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/tv_recipe_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{String.format(@string/ss, viewmodel.recipe.title)}"
-                    tools:text="Pizza:"
-                    android:textColor="@android:color/black"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@{String.format(@string/recipe_name_section_title, viewmodel.recipe.title)}"
+                    android:textColor="@color/section_title_text_color"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    tools:text="Pizza:" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp"
+                    android:paddingStart="38dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="38dp"
                     android:paddingBottom="20dp"
                     android:text="@{viewmodel.recipe.description}"
-                    tools:text="Pizza jest potrawą kuchni włoskiej, obecnie szeroko rozpowszechnioną na całym świecie i zaliczaną do dań typu fast food. W wersji podstawowej jest to płaski placek z wytrawnego ciasta makaronowego; znacznie później zaczęto także używać ciasta drożdżowego (focaccia). Pizza pieczona jest w bardzo mocno nagrzanym piecu."
-                    />
+                    android:textColor="@color/section_content_text_color"
+                    tools:text="Pizza jest potrawą kuchni włoskiej, obecnie szeroko rozpowszechnioną na całym świecie i zaliczaną do dań typu fast food. W wersji podstawowej jest to płaski placek z wytrawnego ciasta makaronowego; znacznie później zaczęto także używać ciasta drożdżowego (focaccia). Pizza pieczona jest w bardzo mocno nagrzanym piecu." />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Ingredients:"
-                    android:text="Ingredients:"
-                    android:textColor="@android:color/black"
+                    android:paddingStart="20dp"
+                    android:text="@string/ingredients_section_title"
+                    android:textColor="@color/section_title_text_color"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    tools:text="Ingredients:" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp"
+                    android:paddingStart="38dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="38dp"
                     android:paddingBottom="20dp"
+                    android:textColor="@color/section_content_text_color"
                     app:setListOfIngredients="@{viewmodel.recipe.ingredients}"
-                    tools:text="- przyprawy do smaku (oregano, bazylia i słodka papryka)"
-                    />
+                    tools:text="- przyprawy do smaku (oregano, bazylia i słodka papryka)" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Preparing:"
-                    android:text="Preparing:"
-                    android:textColor="@android:color/black"
+                    android:paddingStart="20dp"
+                    android:text="@string/preparing_section_title"
+                    android:textColor="@color/section_title_text_color"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    tools:text="Preparing:" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp"
+                    android:paddingStart="38dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="38dp"
                     android:paddingBottom="20dp"
+                    android:textColor="@color/section_content_text_color"
                     app:setListOfPreparingSteps="@{viewmodel.recipe.preparing}"
-                    tools:text="1. przyprawy do smaku (oregano, bazylia i słodka papryka)"
-                    />
+                    tools:text="1. przyprawy do smaku (oregano, bazylia i słodka papryka)" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Images:"
-                    android:text="Images:"
-                    android:textColor="@android:color/black"
+                    android:paddingStart="20dp"
+                    android:text="@string/images_section_title"
+                    android:textColor="@color/section_title_text_color"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    tools:text="Images:" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingTop="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
 
                     <ImageView
                         android:id="@+id/iv_recipe_image1"
-                        app:setRecipeImg1Src="@{viewmodel.recipe.imgs[1]}"
                         android:layout_width="0dp"
                         android:layout_height="135dp"
                         android:layout_weight="1"
-                        android:paddingStart="10dp"
+                        android:paddingStart="30dp"
                         android:paddingEnd="10dp"
+                        app:setRecipeImg1Src="@{viewmodel.recipe.imgs[1]}"
                         tools:src="@drawable/pizza2" />
 
                     <ImageView
@@ -125,12 +137,18 @@
                         android:layout_height="135dp"
                         android:layout_weight="1"
                         android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
+                        android:paddingEnd="30dp"
                         app:setRecipeImg1Src="@{viewmodel.recipe.imgs[2]}"
                         tools:src="@drawable/pizza2" />
 
-
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/user_login_information_background_color"
+                    android:gravity="center"
+                    android:text="Logged as Lorem Ipsum" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

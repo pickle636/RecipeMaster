@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">RecipeMaster</string>
-    <string name="recipe_title">Pizza Recipe!</string>
     <string name="please_wait">Please wait…</string>
     <string name="please_click_back_again_to_exit">Please click back again to exit %1$s</string>
     <string name="hyphen">- %1$s</string>
-    <string name="ss">%1$s:</string>
-    <string name="recipe">%1$s Recipe!</string>
+    <string name="recipe_name_section_title">%1$s:</string>
+    <string name="recipe_title">%1$s Recipe!</string>
     <string name="positive_yes">Yes</string>
     <string name="negative_no">No</string>
     <string name="dialog_message">Do you want to save the image?</string>
+    <string name="ingredients_section_title">Ingredients:</string>
+    <string name="preparing_section_title">Preparing:</string>
+    <string name="images_section_title">Images:</string>
+
 </resources>

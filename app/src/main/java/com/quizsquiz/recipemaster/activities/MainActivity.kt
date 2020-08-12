@@ -29,10 +29,7 @@ class MainActivity : BaseActivity() {
 
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
-
-
     }
-
 
     override fun onBackPressed() {
         doubleBackToExit()

@@ -9,4 +9,8 @@
     <color name="facebook_blue_background_button_color_pressed">#186cad</color>
     <color name="get_recipe_red_background_button_color_normal">#f44336</color>
     <color name="get_recipe_red_background_button_color_pressed">#ff6054</color>
+    <color name="user_login_information_background_color">#e1e1e1</color>
+    <color name="user_login_information_text_color">#646464</color>
+    <color name="section_title_text_color">#646464</color>
+    <color name="section_content_text_color">#878787</color>
 </resources>
